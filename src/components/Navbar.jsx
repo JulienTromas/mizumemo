@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import "../styles/navbar.css";
 import UserCollection from "./UserCollection";
-import { BrowserRouter,NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import {db} from "../services/firebase"
 // import { saveObject } from "../utils/index.js";
 
@@ -13,14 +13,14 @@ export default function Navbar(props) {
 <div>
 
     <div id="navBar" className="navbar">
-        <NavLink to="/select">
+        <NavLink to="/Select">
             <button
             id="select-plant"
             className="navbar-header">
             Select a plant
             </button>
         </NavLink>
-        <NavLink to="/collection">
+        <NavLink to="/Collection">
             <button
             id="plant-collection"
             className="navbar-header">
