@@ -1,16 +1,22 @@
-import React from 'react'
+import React, {useState} from 'react'
+import PlantCard from "./PlantCard";
+import {db} from "../services/firebase"
 
-export default function SelectPlant() {
+export default function SelectPlant(props) {
+
     return (
         <>
-           Would you like to select a plant ? <br></br>
-
-           Plant Card<br></br>
-           Plant Card<br></br>
-           Plant Card<br></br>
-           Plant Card<br></br>
-           Plant Card<br></br>
-           Plant Card<br></br>
+        <div>
+            <h1 id="selectPlantTitle">Choose a plant from our selection</h1>
+            {props.plants.map((plant)=>(
+                <div key={plant.id}>
+                    <h2>{plant.commonName}</h2>
+                    <p><em>{plant.scientificName}</em></p>
+                    <p>{plant.recommendedLight}</p>
+                    <p>{plant.recommendedWater}</p>
+                </div>
+            ))}
+        </div>
         </>
     )
 }
