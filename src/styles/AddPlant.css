@@ -1,0 +1,10 @@
+.inputField {
+    margin: auto;
+    display: block;
+}
+.inputButton {
+    margin: auto;
+    margin-top: 8px;
+    display: flex;
+  justify-content: center;
+}

@@ -11,7 +11,6 @@ export default function Navbar(props) {
   return (
     <>      
 <div>
-
     <div id="navBar" className="navbar">
         <NavLink to="/Select">
             <button
