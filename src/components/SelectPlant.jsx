@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
-import {Card} from 'react-bootstrap'
+import {Card, CardDeck, ListGroup, Button} from 'react-bootstrap'
 import { NavLink } from 'react-router-dom';
+import '../styles/SelectPlant.css';
 
 export default function SelectPlant(props) {
 
@@ -11,32 +12,24 @@ export default function SelectPlant(props) {
         <>
         <div>
             <h1 id="selectPlantTitle">Choose a plant from our selection</h1>
-            <div class="card-deck">
+            <CardDeck>
             {props.plants.map((plant)=>(
-                <div class="card" style={{width: '18rem'}} key={plant.id}>
-                      <div class="card-header text-center">
-                      <h5 class="card-title "><b>{plant.commonName}</b></h5>
-                        <p class="card-text"><em>{plant.scientificName}</em></p>
-                        </div>
-                    {/* <img class="card-img-top" src="..." alt="Card image cap"></img> */}
-                    {/* <div class="card-body">
-                        <h5 class="card-title"><b>{plant.commonName}</b></h5>
-                        <p class="card-text"><em>{plant.scientificName}</em></p>
-                    </div> */}
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item text-center"><b>Light:</b><br></br> {plant.recommendedLight}</li>
-                        <li class="list-group-item text-center"><b>Water:</b><br></br> {plant.recommendedWater}</li>
-                    </ul>
-                        <div class="card-body text-center" style={{height: '5rem'}}>        <NavLink to="/AddPlant">
-                        <button class="btn btn-primary center"                 onClick={() => {
+                <Card style={{width:'18rem' }} key={plant.id}>
+                    <Card.Title class="card-header text-center"><h5><b>{plant.commonName}</b></h5><em>{plant.scientificName}</em></Card.Title>
+                    <ListGroup variant='flush' class="text-center">
+                        <ListGroup.Item><b>Light:</b><br></br> {plant.recommendedLight}</ListGroup.Item>
+                        <ListGroup.Item><b>Water:</b><br></br> {plant.recommendedWater}</ListGroup.Item>
+                    </ListGroup>
+                    <Card.Footer class="text-center">
+                    <NavLink to="/AddPlant">
+                    <Button class="btn btn-primary text-center" variant="primary" onClick={() => {
                   props.setAddPlant(plant);
-                }}>Add to collection</button>
-        </NavLink>
-                        </div>    
-
-                </div>
+                }}>Add to collection</Button>
+                    </NavLink>
+                    </Card.Footer>
+                </Card>
             ))}
-            </div>
+            </CardDeck>
         </div>
         </>
     )

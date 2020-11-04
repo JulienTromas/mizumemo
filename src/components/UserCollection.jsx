@@ -20,15 +20,16 @@ export default function UserCollection(props) {
             {props.userPlants.map((plant)=>(
                 <div class="card" style={{width: '18rem'}} key={plant.id}>
                       <div class="card-header">
-                      <h5 class="card-title"><b>{plant.plantsurname}</b></h5>
-                      <p class="card-text"><b>{plant.commonName}</b></p>
-                        <p class="card-text"><em>{plant.scientificName}</em></p>
+                      <h4 class="card-title text-center"><b>{plant.plantsurname}</b></h4>
+                      <p class="card-text text-center"><b>{plant.commonName}</b></p>
+                        <p class="card-text text-center"><em>{plant.scientificName}</em></p>
                         {/* <p class="card-text"><b>{plant.boughtDate}</b></p> */}
                         </div>
                     {/* <img class="card-img-top" src="..."></img> */}
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item text-center"><b>Light:</b><br></br> {plant.recommendedLight}</li>
                         <li class="list-group-item text-center"><b>Water:</b><br></br> {plant.recommendedWater}</li>
+                        <li class="list-group-item text-center color:green" ><b>Watered {plant.waterAgo} days ago</b></li>
                     </ul> 
                     <button onClick={() => deletePlant(plant)}>Remove from collection</button>
                 </div>

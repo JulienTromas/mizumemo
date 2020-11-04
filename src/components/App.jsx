@@ -65,7 +65,6 @@ function App() {
            </Switch>
         </div> 
         <div>
-          Welcome to MizuMemo, the plant watering memo app.
           {/* Insert login area */}
         </div>
       </BrowserRouter>
