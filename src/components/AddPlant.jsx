@@ -3,6 +3,7 @@ import {Form, Button, Card} from 'react-bootstrap'
 import firebase from '../services/firebase'
 import { v4 as uuidv4 } from "uuid";
 import { NavLink } from 'react-router-dom';
+import '../styles/AddPlant.css';
 
 export default function AddPlant(props) {
 
@@ -19,16 +20,17 @@ export default function AddPlant(props) {
         
     return (
         <>
-        <h1>Add a new plant to your collection</h1>
+        <h1 class="text-center">Add a new plant to your collection</h1>
       <div className="inputBox">
-        <h3>Add New</h3>
+        <h3 class="text-center">Give a surname to your new plant!</h3>
         <input
+          class="inputField"
           type="text"
           value={plantsurname}
           onChange={(e) => setPlantsurname(e.target.value)}
         />
         <NavLink to="/Collection">
-        <button onClick={() => addUserPlant({
+        <button class="btn btn-primary inputButton" variant="primary" onClick={() => addUserPlant({
             plantsurname: plantsurname,
             id: uuidv4(),
             commonName: props.addPlant.commonName,
@@ -42,6 +44,7 @@ export default function AddPlant(props) {
           Submit
         </button>
         </NavLink>
+        
       </div>
         {/* <Card>
           <Card.Body>

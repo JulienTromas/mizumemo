@@ -11,7 +11,7 @@ export default function SelectPlant(props) {
     return (
         <>
         <div>
-            <h1 id="selectPlantTitle">Choose a plant from our selection</h1>
+            <h1 id="selectPlantTitle" class="text-center">Choose a plant from our selection</h1>
             <CardDeck>
             {props.plants.map((plant)=>(
                 <Card style={{width:'18rem' }} key={plant.id}>
