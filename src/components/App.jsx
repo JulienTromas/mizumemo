@@ -1,13 +1,12 @@
 import React, { useState, useEffect, Component,render } from "react";
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import '../styles/App.css';
-import Signup from './Signup'
 import {Container} from 'react-bootstrap'
-import {AuthProvider} from "../contexts/AuthContext"
 import SelectPlant from "./SelectPlant"
 import UserCollection from "./UserCollection"
 import AddPlant from "./AddPlant"
 import Navbar from "./Navbar";
+import Home from "./Home";
 // import {db} from '../services/firebase'
 import firebase from '../services/firebase'
 
@@ -55,7 +54,7 @@ function App() {
       <div>
       <Navbar />
             <Switch>
-             {/* <Route path="/Home" render={() => <SelectPlant plants={plants} setAddPlant={setAddPlant} />} />  */}
+             <Route path="/Home" render={() => <Home/>} />
              <Route path="/Select" render={() => <SelectPlant plants={plants} setAddPlant={setAddPlant} />} />
              <Route path="/Collection" render={() => <UserCollection userPlants={userPlants} />} />
              <Route path="/AddPlant" render={() => <AddPlant  addPlant={addPlant} setAddPlant={setAddPlant}/>} />

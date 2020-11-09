@@ -28,7 +28,6 @@ export default function UserCollection(props) {
         });
       }
 
-
     function waterPlant(plant) {
         firebase.firestore().collection("userPlants")
         .doc(plant.id)
@@ -47,7 +46,12 @@ export default function UserCollection(props) {
                     <ListGroup variant='flush' class="text-center">
                         <ListGroup.Item class="text-center"><b>Light:</b><br></br> {plant.recommendedLight}</ListGroup.Item>
                         <ListGroup.Item class="text-center"><b>Water:</b><br></br> {plant.recommendedWater}</ListGroup.Item>
-                        <ListGroup.Item class="text-center"><b>Watered {plant.waterAgo} days ago</b></ListGroup.Item>
+                        {plant.waterAgo !== (plant.waterDelay-1) ? (
+                            <ListGroup.Item class="text-center" style={{color: 'green'}}><b>Watered {plant.waterAgo} days ago</b></ListGroup.Item>
+                        ) : (
+                            <ListGroup.Item class="text-center"style={{color: 'red'}}><b>Watered {plant.waterAgo} days ago</b></ListGroup.Item>
+                        )}
+                        {/* <ListGroup.Item class="text-center"><b>Watered {plant.waterAgo} days ago</b></ListGroup.Item> */}
                         <ListGroup.Item class="text-center"><Button class="btn btn-primary text-center" variant="primary" onClick={() => waterPlant(plant)}>Water your plant</Button></ListGroup.Item>
                         <ListGroup.Item class="text-center"><Button class="btn btn-primary text-center" variant="primary" onClick={() => deletePlant(plant)}>Remove from collection</Button></ListGroup.Item>
 

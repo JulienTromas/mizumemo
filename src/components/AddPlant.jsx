@@ -30,7 +30,7 @@ export default function AddPlant(props) {
           onChange={(e) => setPlantsurname(e.target.value)}
         />
         <NavLink to="/Collection">
-        <button class="btn btn-primary inputButton" variant="primary" onClick={() => addUserPlant({
+        <button id="inputButton" class="btn btn-primary" variant="primary" onClick={() => addUserPlant({
             plantsurname: plantsurname,
             id: uuidv4(),
             commonName: props.addPlant.commonName,
