@@ -1,6 +1,7 @@
-# Getting Started with Create React App
+# Mizumemo
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A companion app to remind you when to water your plants.
+This project was created during my time as a student at Code Chrysalis.
 
 ## Available Scripts
 
