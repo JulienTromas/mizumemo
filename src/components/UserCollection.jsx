@@ -7,7 +7,6 @@ import schedule from 'node-schedule'
 export default function UserCollection(props) {
 
     const increment = firebase.firestore.FieldValue.increment(1);
-    // const decrement = firebase.firestore.FieldValue.increment(-1);
 
     useEffect(()=>{
         schedule.scheduleJob({hour: 23, minute: 59, second: 59}, () =>  { 
@@ -51,13 +50,10 @@ export default function UserCollection(props) {
                         ) : (
                             <ListGroup.Item class="text-center"style={{color: 'red'}}><b>Watered {plant.waterAgo} days ago</b></ListGroup.Item>
                         )}
-                        {/* <ListGroup.Item class="text-center"><b>Watered {plant.waterAgo} days ago</b></ListGroup.Item> */}
                         <ListGroup.Item class="text-center"><Button class="btn btn-primary text-center" variant="primary" onClick={() => waterPlant(plant)}>Water your plant</Button></ListGroup.Item>
                         <ListGroup.Item class="text-center"><Button class="btn btn-primary text-center" variant="primary" onClick={() => deletePlant(plant)}>Remove from collection</Button></ListGroup.Item>
-
                     </ListGroup>
-                    
-                    
+ 
                 </Card>
             ))}
             </CardDeck>
