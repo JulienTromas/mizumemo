@@ -46,38 +46,6 @@ export default function AddPlant(props) {
         </NavLink>
         
       </div>
-        {/* <Card>
-          <Card.Body>
-            <h2 className= "text-center mb-4">Add a plant</h2>
-            <Form>
-                <Form.Group controlId="formPlantSurname">
-                <Form.Label>Nickname</Form.Label>
-                <Form.Control type="text" placeholder="Enter your plant's nickname" />
-                <Form.Text className="text-muted">
-                Give a nickname to your new green companion
-                </Form.Text>
-                </Form.Group>
-                <div class="card" style={{width: '18rem'}}>
-                      <div class="card-header text-center">
-                      <h5 class="card-title "><b>{props.addPlant.commonName}</b></h5>
-                        <p class="card-text"><em>{props.addPlant.scientificName}</em></p>
-                        </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item text-center"><b>Light:</b><br></br> {props.addPlant.recommendedLight}</li>
-                        <li class="list-group-item text-center"><b>Water:</b><br></br> {props.addPlant.recommendedWater}</li>
-                    </ul> 
-
-                </div>
-
-  <Button variant="primary" type="submit" onClick={() => addUserPlant({ plantsurname, desc, id: uuidv4() })}>
-    Add to collection
-  </Button>
-</Form>
-          </Card.Body>
-        </Card>
-        <div className="w-100 text-center mt-2">
-          Already have an account? Log In
-        </div> */}
       </>
     )
 }
