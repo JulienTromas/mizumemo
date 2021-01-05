@@ -7,7 +7,6 @@ import UserCollection from "./UserCollection"
 import AddPlant from "./AddPlant"
 import Navbar from "./Navbar";
 import Home from "./Home";
-// import {db} from '../services/firebase'
 import firebase from '../services/firebase'
 
 
@@ -58,14 +57,8 @@ function App() {
              <Route path="/Select" render={() => <SelectPlant plants={plants} setAddPlant={setAddPlant} />} />
              <Route path="/Collection" render={() => <UserCollection userPlants={userPlants} />} />
              <Route path="/AddPlant" render={() => <AddPlant  addPlant={addPlant} setAddPlant={setAddPlant}/>} />
-             {/* <Route path="/About" render={() => <AddPlant  addPlant={addPlant} setAddPlant={setAddPlant}/>} />
-             <Route path="/Login" render={() => <AddPlant  addPlant={addPlant} setAddPlant={setAddPlant}/>} />
-             <Route path="/SignUp" render={() => <AddPlant  addPlant={addPlant} setAddPlant={setAddPlant}/>} /> */}
            </Switch>
         </div> 
-        <div>
-          {/* Insert login area */}
-        </div>
       </BrowserRouter>
 
     </>
@@ -73,13 +66,3 @@ function App() {
 }
 
 export default App;
-
-
-    // {/* <AuthProvider>
-    //   <Container className="d-flex align-items-center justify-content-center"
-    //     style={{minHeight:"100vh"}}>
-    //       <div className="w-100" style={{maxWidth: '400px'}}>
-    //         <Signup />
-    //       </div>
-    //   </Container>
-    // </AuthProvider> */}
