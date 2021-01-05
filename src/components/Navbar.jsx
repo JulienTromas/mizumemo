@@ -3,10 +3,8 @@ import "../styles/navbar.css";
 import UserCollection from "./UserCollection";
 import { NavLink } from 'react-router-dom';
 import {db} from "../services/firebase"
-// import { saveObject } from "../utils/index.js";
 
 export default function Navbar(props) {
-
 
   return (
     <>      
