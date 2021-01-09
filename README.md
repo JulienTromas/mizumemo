@@ -4,7 +4,7 @@
 This project was created during my time as a student at Code Chrysalis.
 Mizumemo is a companion app to remind you when to water your plants.
 
-https://mizumemo-8347a.web.app/Home
+https://mizumemo-8347a.web.app/
 
 ### Overview
 
